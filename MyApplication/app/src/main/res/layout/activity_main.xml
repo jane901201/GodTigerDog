@@ -110,4 +110,13 @@
         app:layout_constraintStart_toEndOf="@+id/tv_mmora"
         app:layout_constraintTop_toBottomOf="@+id/btn_Start" />
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="148dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
