@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:text="神仙老虎狗遊戲"
+        android:textColor="#00BCD4"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <TextView
+        android:id="@+id/inputPlayerNameTipTextView"
+        android:layout_width="176dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="12dp"
+        android:text="輸入你的名子開始遊戲"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNameEditText" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="308dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPlayerNameTipTextView">
+
+        <RadioButton
+            android:id="@+id/godButton"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:text="神" />
+
+        <RadioButton
+            android:id="@+id/tigerButton"
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:text="老虎" />
+
+        <RadioButton
+            android:id="@+id/dogButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="狗" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/godImage"
+        android:layout_width="96dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:srcCompat="@drawable/god" />
+
+    <ImageView
+        android:id="@+id/tigerImage"
+        android:layout_width="133dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/godImage"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:srcCompat="@drawable/tiger" />
+
+    <ImageView
+        android:id="@+id/dogImage"
+        android:layout_width="109dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:srcCompat="@drawable/dog" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="24dp"
+        android:text="開始遊戲"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tigerImage" />
+
+    <TextView
+        android:id="@+id/playerNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="玩家名稱"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startButton" />
+
+    <TextView
+        android:id="@+id/victoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="贏家"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/playerNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/startButton" />
+
+    <TextView
+        android:id="@+id/playerMoraTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="玩家猜拳"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/victoryTextView"
+        app:layout_constraintTop_toBottomOf="@+id/startButton" />
+
+    <TextView
+        android:id="@+id/computerMoraTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="電腦出拳"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/playerMoraTextView"
+        app:layout_constraintTop_toBottomOf="@+id/startButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
